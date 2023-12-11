@@ -22,9 +22,6 @@ docker exec app_fpm composer i
 [//]: # (composer run-script generate-user )
 
 [//]: # (``` )
-
-### Generate swagger
-```./vendor/bin/openapi src -o openapi.yaml```
  
 ## Usage
 

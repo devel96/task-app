@@ -8,7 +8,7 @@ use OpenApi\Attributes as OA;
 
 #[OA\QueryParameter(
     parameter: 'general--page',
-    name: 'paginate[offset]',
+    name: 'offset',
     description: 'The current page for the result set, defaults to *1*',
     schema: new OA\Schema(
         type: 'integer',
@@ -17,7 +17,7 @@ use OpenApi\Attributes as OA;
 )]
 #[OA\QueryParameter(
     parameter: 'general--limit',
-    name: 'paginate[limit]',
+    name: 'limit',
     description: 'The current limit for the result set, defaults to *10*',
     schema: new OA\Schema(
         type: 'integer',

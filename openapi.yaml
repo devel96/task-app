@@ -9,7 +9,7 @@ paths:
   /api/v1/auth/login:
     post:
       tags:
-        - User
+        - Auth
       summary: 'Auth login'
       operationId: websites-user-create
       requestBody:
@@ -156,12 +156,6 @@ paths:
       security:
         -
           bearerAuth: []
-  api/v2/swagger:
-    get:
-      operationId: c517bbd6bbf338ce01a115bfdec37197
-      responses:
-        '200':
-          description: 'The data'
   /api/v1/task/me:
     get:
       tags:
@@ -525,7 +519,6 @@ components:
           example: 400
         type:
           type: string
-          example: yii\web\BadRequestHttpException
       type: object
     ForbiddenObject:
       required:
@@ -549,7 +542,6 @@ components:
           example: 401
         type:
           type: string
-          example: yii\web\UnauthorizedHttpException
       type: object
     MessageOkSuccessRequestObject:
       required:
@@ -581,7 +573,6 @@ components:
           example: 500
         type:
           type: string
-          example: yii\web\ServerErrorHttpException
       type: object
     UnauthorizedObject:
       required:
@@ -605,7 +596,6 @@ components:
           example: 401
         type:
           type: string
-          example: yii\web\UnauthorizedHttpException
       type: object
     TaskDataObject:
       required:
@@ -636,14 +626,14 @@ components:
       type: object
   parameters:
     general--page:
-      name: 'paginate[offset]'
+      name: offset
       in: query
       description: 'The current page for the result set, defaults to *1*'
       schema:
         type: integer
         default: 1
     general--limit:
-      name: 'paginate[limit]'
+      name: limit
       in: query
       description: 'The current limit for the result set, defaults to *10*'
       schema:

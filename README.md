@@ -4,12 +4,12 @@
 ### Build project
 ```docker-compose up -d --build```
 
-### run migrations
+### Run migrations
 
 ```bash 
 docker exec app_fpm php /var/www/html/bin/console doctrine:migrations:migrate
 ```
-### install dependencies and generate users
+### Install dependencies and generate users
 
 ```bash 
 docker exec app_fpm composer i 
@@ -30,6 +30,8 @@ docker exec app_fpm composer i
 
 [POST] - http://localhost/api/v1/auth/login 
 
+***
+Doc is located in ``swagger.json`` or ``openapi.yaml``
 
 > **Note**:
 > ##### usernames 

@@ -46,7 +46,7 @@ final class LoginAction extends AbstractController
                 ]
             )
         ),
-        tags: ['User'],
+        tags: ['Auth'],
         responses: [
             new OA\Response(
                 response: 200,

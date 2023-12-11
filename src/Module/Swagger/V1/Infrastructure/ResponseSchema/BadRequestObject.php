@@ -35,7 +35,6 @@ use OpenApi\Attributes as OA;
         new OA\Property(
             property: 'type',
             type: 'string',
-            example: "yii\web\BadRequestHttpException"
         ),
     ],
     type: 'object'
